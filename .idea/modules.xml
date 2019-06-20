@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/employess-360.iml" filepath="$PROJECT_DIR$/employess-360.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-service/src/main/main.iml" filepath="$PROJECT_DIR$/config-service/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-service/src/test/test.iml" filepath="$PROJECT_DIR$/config-service/src/test/test.iml" />
     </modules>
   </component>
 </project>

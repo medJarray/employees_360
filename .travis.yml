@@ -16,3 +16,6 @@ notifications:
     recipients:
     - jarraymohamed92@hotmail.fr
     on_failure: always
+env:
+  global:
+    - CODECOV_TOKEN=:a460c5b3-1883-4cee-acd4-b5507dfac3d9

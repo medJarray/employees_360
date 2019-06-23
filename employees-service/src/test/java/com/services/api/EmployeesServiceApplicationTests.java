@@ -1,4 +1,4 @@
-package com.services.employeesservice;
+package com.services.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

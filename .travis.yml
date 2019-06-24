@@ -1,2 +1,19 @@
 language: java
 jdk: oraclejdk8
+sudo: false
+dist: trusty
+install: true
+script:
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=medJarray_employees_360  -Dsonar.organization=medjarray-github  -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6cd8e84491a8fe048034399de726bef4f9d2d376
+- mvn cobertura:cobertura
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+cache:
+  directories:
+  - "$HOME/.m2"
+  - "$HOME/.sonar/cache"
+notifications:
+  email:
+    recipients:
+    - jarraymohamed92@hotmail.fr
+    on_failure: always

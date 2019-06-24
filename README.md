@@ -1,6 +1,6 @@
 # Employees 360 App
 
-> Master :
+> Master :  
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ebcf3aabb8de43078583b0d8c74b3929)](https://app.codacy.com/app/medJarray/employees_360?utm_source=github.com&utm_medium=referral&utm_content=medJarray/employees_360&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/medJarray/employees_360.svg?branch=master)](https://travis-ci.org/medJarray/employees_360)
 [![BCH compliance](https://bettercodehub.com/edge/badge/medJarray/employees_360?branch=master)](https://bettercodehub.com/)

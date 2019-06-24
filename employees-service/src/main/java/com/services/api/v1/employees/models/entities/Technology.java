@@ -26,7 +26,7 @@ public class Technology {
     @Column(name = "level")
     private String level;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="experience_id")
     private Experience experience;
 }

@@ -69,6 +69,6 @@ public class Employee {
     @OneToOne
     @JoinColumn(name = "costumer_id")
     private Costumer costumer;
-
+    
 }
 

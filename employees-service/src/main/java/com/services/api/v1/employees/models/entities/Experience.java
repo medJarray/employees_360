@@ -36,8 +36,6 @@ public class Experience {
     @JoinColumn(name = "costumer_id")
     private Costumer costumer;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
-    @JoinColumn(name="employee_id")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Employee employee;
-
 }

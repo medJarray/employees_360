@@ -5,7 +5,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
 @Builder
 @Getter
@@ -14,7 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Entity
 @Table(name = "address")
-public class Address implements Serializable {
+public class Address {
 
     @Id
     @NotNull

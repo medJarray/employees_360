@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "experience")
-public class Experience implements Serializable {
+public class Experience {
 
     @Id
     @NotNull
@@ -32,14 +32,11 @@ public class Experience implements Serializable {
     @Column(name = "end_date_of_service")
     private LocalDate endDateService;
 
-    @OneToMany(mappedBy="experience")
-    private List<Technology> technology;
-
     @OneToOne
     @JoinColumn(name = "costumer_id")
     private Costumer costumer;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
     @JoinColumn(name="employee_id")
     private Employee employee;
 

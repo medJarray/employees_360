@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -13,9 +12,10 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Entity
 @Table(name = "employee")
-public class Employee implements Serializable {
+public class Employee {
 
     @Id
     @NotNull
@@ -61,9 +61,6 @@ public class Employee implements Serializable {
 
     @Column(name = "end_contract_date")
     private LocalDate dateEndContract;
-
-    @OneToMany(mappedBy="employee")
-    private List<Experience> experiences;
 
     @OneToOne
     @JoinColumn(name = "address_id")

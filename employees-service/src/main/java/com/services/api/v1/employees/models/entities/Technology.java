@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 
 @Builder
 @Getter
@@ -13,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Entity
 @Table(name = "technologie")
-public class Technology implements Serializable {
+public class Technology {
 
     @Id
     @NotNull
@@ -27,7 +26,7 @@ public class Technology implements Serializable {
     @Column(name = "level")
     private String level;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
     @JoinColumn(name="experience_id")
     private Experience experience;
 }

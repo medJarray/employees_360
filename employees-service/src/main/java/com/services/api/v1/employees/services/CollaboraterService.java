@@ -4,7 +4,10 @@ import com.services.api.v1.employees.models.entities.Collaborater;
 
 import java.util.List;
 
-public interface EmployeesService {
+public interface CollaboraterService {
 
-    List<Collaborater> getAllEmployee();
+    List<Collaborater> getAllCollaborater();
+    List<Collaborater> getAllCollaboraterByCostumer(Long costumerId);
+
+    Collaborater save(Collaborater collaborater);
 }

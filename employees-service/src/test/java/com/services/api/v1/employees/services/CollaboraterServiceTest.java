@@ -13,16 +13,16 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class EmployeesServiceTest {
+public class CollaboraterServiceTest {
 
     @Autowired
-    private EmployeesService employeesService;
+    private CollaboraterService collaboraterService;
 
     @DisplayName("Test List Employees Is Empty")
     @Test
     public void emptyListOfEmployees() {
 
-        List<Collaborater> listOfCollaborater = employeesService.getAllEmployee();
+        List<Collaborater> listOfCollaborater = collaboraterService.getAllCollaborater();
         Assert.assertTrue("There are no employers",0 == listOfCollaborater.size());
     }
 }

@@ -1,3 +1,4 @@
+
 package com.services.api.v1.employees.models.entities;
 
 import lombok.*;
@@ -14,13 +15,13 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "collaborater")
+public class Collaborater {
 
     @Id
     @NotNull
     @GeneratedValue
-    @Column(name = "employee_id")
+    @Column(name = "collaborater_id")
     private long id;
 
     @Column(name = "last_name")
@@ -62,13 +63,17 @@ public class Employee {
     @Column(name = "end_contract_date")
     private LocalDate dateEndContract;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "costumer_id")
     private Costumer costumer;
-    
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "employee_id")
+    private List<Experience> experiences;
+
 }
 

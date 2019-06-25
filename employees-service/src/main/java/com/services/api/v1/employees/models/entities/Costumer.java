@@ -27,6 +27,9 @@ public class Costumer {
     @Column(name = "activity_area")
     private String activityArea;
 
+    @Column(name = "status")
+    private String status;
+
     @OneToOne
     @JoinColumn(name = "costumer_address_id")
     private Address costumerAddress;

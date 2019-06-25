@@ -1,5 +1,6 @@
 package com.services.api;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -19,6 +20,11 @@ public class EmployeesServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeesServiceApplication.class, args);
+	}
+
+	@Bean
+	public ModelMapper modelMapper() {
+		return new ModelMapper();
 	}
 
 	@Bean

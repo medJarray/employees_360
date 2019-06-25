@@ -15,14 +15,14 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "employee")
+@Table(name = "collaborater")
 public class Collaborater {
 
     @Id
     @NotNull
     @GeneratedValue
-    @Column(name = "collaborateur_id")
-    private long collaborateurId;
+    @Column(name = "collaborater_id")
+    private long id;
 
     @Column(name = "last_name")
     private String lastName;
@@ -63,11 +63,11 @@ public class Collaborater {
     @Column(name = "end_contract_date")
     private LocalDate dateEndContract;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "costumer_id")
     private Costumer costumer;
 

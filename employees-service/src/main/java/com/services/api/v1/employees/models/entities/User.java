@@ -19,7 +19,7 @@ public class User {
     @NotNull
     @GeneratedValue
     @Column(name = "user_id")
-    private Long userId;
+    private Long id;
 
     @Column(name = "email_professional")
     private String professionalEmail;

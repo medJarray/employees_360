@@ -29,6 +29,7 @@ public class CollaboraterServiceImpl implements CollaboraterService {
 
     @Override
     public Collaborater save(Collaborater collaborater) {
-        return null;
+        Collaborater collaboraterSaved = collaboraterRepository.save(collaborater);
+        return collaborater;
     }
 }

@@ -30,8 +30,8 @@ public class Experience {
     @Column(name = "end_date_of_service")
     private LocalDate endDateService;
 
-    @Column(name = "employee_id")
-    private Long employeeId;
+    @Column(name = "collaborater_id")
+    private Long collaboraterId;
 
     @OneToOne
     @JoinColumn(name = "costumer_id")

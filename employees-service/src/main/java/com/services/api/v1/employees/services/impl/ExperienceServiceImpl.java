@@ -17,7 +17,7 @@ public class ExperienceServiceImpl implements ExperienceService {
     @Override
     public List<Experience> getAllExperienceByCollaboraterId(Long collaboraterId) {
 
-        List<Experience> experiences = experienceRepository.findAllByCollaborateurId(collaboraterId);
+        List<Experience> experiences = experienceRepository.findAllByCollaboraterId(collaboraterId);
         return experiences;
 
     }

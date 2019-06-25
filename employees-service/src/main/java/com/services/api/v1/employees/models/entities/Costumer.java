@@ -19,7 +19,7 @@ public class Costumer {
     @NotNull
     @GeneratedValue
     @Column(name = "costumer_id")
-    private long costumerId;
+    private long id;
 
     @Column(name = "costumer_name")
     private String costumerName;

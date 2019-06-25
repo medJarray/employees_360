@@ -4,9 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
 
 @Builder
 @Getter
@@ -32,10 +30,10 @@ public class Experience {
     @Column(name = "end_date_of_service")
     private LocalDate endDateService;
 
+    @Column(name = "employee_id")
+    private Long employeeId;
+
     @OneToOne
     @JoinColumn(name = "costumer_id")
     private Costumer costumer;
-
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Employee employee;
 }

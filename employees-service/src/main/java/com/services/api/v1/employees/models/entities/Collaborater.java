@@ -1,3 +1,4 @@
+
 package com.services.api.v1.employees.models.entities;
 
 import lombok.*;
@@ -15,13 +16,13 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "employee")
-public class Employee {
+public class Collaborater {
 
     @Id
     @NotNull
     @GeneratedValue
-    @Column(name = "employee_id")
-    private long id;
+    @Column(name = "collaborateur_id")
+    private long collaborateurId;
 
     @Column(name = "last_name")
     private String lastName;

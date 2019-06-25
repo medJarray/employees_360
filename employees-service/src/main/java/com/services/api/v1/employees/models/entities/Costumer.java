@@ -19,13 +19,16 @@ public class Costumer {
     @NotNull
     @GeneratedValue
     @Column(name = "costumer_id")
-    private long id;
+    private long costumerId;
 
     @Column(name = "costumer_name")
     private String costumerName;
 
     @Column(name = "activity_area")
     private String activityArea;
+
+    @Column(name = "status")
+    private String status;
 
     @OneToOne
     @JoinColumn(name = "costumer_address_id")

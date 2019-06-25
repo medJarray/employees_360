@@ -69,6 +69,10 @@ public class Employee {
     @OneToOne
     @JoinColumn(name = "costumer_id")
     private Costumer costumer;
-    
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "employee_id")
+    private List<Experience> experiences;
+
 }
 

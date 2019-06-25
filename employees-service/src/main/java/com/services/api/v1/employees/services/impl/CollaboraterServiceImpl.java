@@ -1,6 +1,6 @@
 package com.services.api.v1.employees.services.impl;
 
-import com.services.api.v1.employees.models.entities.Employee;
+import com.services.api.v1.employees.models.entities.Collaborater;
 import com.services.api.v1.employees.repositories.EmployeesRepository;
 import com.services.api.v1.employees.services.EmployeesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class EmployeesServiceImpl implements EmployeesService {
     private EmployeesRepository  employeesRepository;
 
     @Override
-    public List<Employee> getAllEmployee() {
+    public List<Collaborater> getAllEmployee() {
         return employeesRepository.findAll();
     }
 }

@@ -1,7 +1,7 @@
 package com.services.api.v1.employees.controllers;
 
-import com.services.api.v1.employees.models.entities.Employee;
-import com.services.api.v1.employees.services.EmployeesService;
+import com.services.api.v1.employees.models.entities.Collaborater;
+import com.services.api.v1.employees.services.CollaboraterService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -19,7 +19,7 @@ import java.util.List;
 public class EmployeesController {
 
     @Autowired
-    private EmployeesService employeesService;
+    private CollaboraterService collaboraterService;
 
     @ApiOperation(value = "View a list of available languages", response = Iterable.class)
     @ApiResponses(value = {
@@ -28,7 +28,7 @@ public class EmployeesController {
             @ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")})
     @GetMapping
-    public List<Employee> getAllEmployees(){
-        return employeesService.getAllEmployee();
+    public List<Collaborater> getAllEmployees(){
+        return collaboraterService.getAllEmployee();
     }
 }

@@ -1,6 +1,6 @@
 package com.services.api.v1.employees.services;
 
-import com.services.api.v1.employees.models.entities.Employee;
+import com.services.api.v1.employees.models.entities.Collaborater;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -22,7 +22,7 @@ public class EmployeesServiceTest {
     @Test
     public void emptyListOfEmployees() {
 
-        List<Employee> listOfEmployee = employeesService.getAllEmployee();
-        Assert.assertTrue("There are no employers",0 == listOfEmployee.size());
+        List<Collaborater> listOfCollaborater = employeesService.getAllEmployee();
+        Assert.assertTrue("There are no employers",0 == listOfCollaborater.size());
     }
 }

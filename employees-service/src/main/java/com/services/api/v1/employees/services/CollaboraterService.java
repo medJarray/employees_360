@@ -1,10 +1,10 @@
 package com.services.api.v1.employees.services;
 
-import com.services.api.v1.employees.models.entities.Employee;
+import com.services.api.v1.employees.models.entities.Collaborater;
 
 import java.util.List;
 
 public interface EmployeesService {
 
-    List<Employee> getAllEmployee();
+    List<Collaborater> getAllEmployee();
 }
